@@ -4,7 +4,7 @@ Extremely simple file upload server
 
 ## Usage
 
-```
+``` shell
 # install
 go get -u github.com/ccat3z/just-upload
 
