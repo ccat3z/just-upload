@@ -29,6 +29,7 @@ const page = `
 func main() {
 	mux := http.NewServeMux()
 	mux.HandleFunc("/", upload)
+	fmt.Println("listen on :7088")
 	http.ListenAndServe(":7088", mux)
 }
 
@@ -71,5 +72,6 @@ func upload(w http.ResponseWriter, r *http.Request) {
 
 		io.Copy(f, file)
 		msg = fmt.Sprintf("get %v", handler.Filename)
+		fmt.Printf("get %v\n", handler.Filename)
 	}
 }
